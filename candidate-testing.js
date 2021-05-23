@@ -31,7 +31,7 @@ function gradeQuiz(candidateAnswers) {
   if (candidateAnswer === correctAnswer) {
     grade = console.log('That\'s correct!');
   } else {
-    grade = console.log('Sorry, that\s the wrong answer.');
+    grade = console.log('Sorry, that\'s the wrong answer.');
   }
 
   return grade;
