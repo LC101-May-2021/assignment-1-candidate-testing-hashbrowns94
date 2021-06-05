@@ -50,6 +50,7 @@ Your Answer: ${candidateAnswers[i]}.` + '\n' +
   } else {
     console.log('>>> Status: FAILED <<<')
   }
+  return percentage;
 }
 
 function runProgram() {
@@ -57,6 +58,7 @@ function runProgram() {
   console.log("Howdy, " + candidateName);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
+  //console.log(gradeQuiz(candidateAnswers));
 }
 
 // Don't write any code below this line //
