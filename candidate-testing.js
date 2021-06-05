@@ -45,11 +45,8 @@ Your Answer: ${candidateAnswers[i]}.` + '\n' +
   }
   let percentage = correctNum / 5 * 100
   console.log(`>>> Overall Grade: ${percentage}% (${correctNum} of 5 responses correct) <<<`);
-  if (percentage >= 80) {
-    console.log('>>> Status: PASSED <<<');
-  } else {
-    console.log('>>> Status: FAILED <<<')
-  }
+  percentage >= 80 ?
+    console.log('>>> Status: PASSED <<<') : console.log('>>> Status: FAILED <<<');
   return percentage;
 }
 
