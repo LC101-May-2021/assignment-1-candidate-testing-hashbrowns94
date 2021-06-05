@@ -33,12 +33,23 @@ function askQuestion() {
 }
 
 function gradeQuiz(candidateAnswers) {
+  let correctNum = 0;
+  console.log('\n' + `Candidate Name: ${candidateName}`);
   for (let i = 0; i < correctAnswers.length; i++) {
-    console.log(`\n******************************** \n
-The answer to question #${i + 1} is ${correctAnswers[i]}. \n
-Your answer: ${candidateAnswers[i]} \n********************************`);
+    console.log(i + 1 + `) ${questions[i]}
+Your Answer: ${candidateAnswers[i]}.` + '\n' + 
+`Correct Answer: ${correctAnswers[i]} \n`);
+  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
+    correctNum++;
+    }
   }
-
+  let percentage = correctNum / 5 * 100
+  console.log(`>>> Overall Grade: ${percentage}% (${correctNum} of 5 responses correct) <<<`);
+  if (percentage >= 80) {
+    console.log('>>> Status: PASSED <<<');
+  } else {
+    console.log('>>> Status: FAILED <<<')
+  }
 }
 
 function runProgram() {
